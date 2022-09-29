@@ -1,0 +1,195 @@
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Nav Section */
+nav {
+  background-color: #ff9500;
+  height: 18px;
+  padding: 18px 20px;
+  font-size: 18px;
+  margin-bottom: 4em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container > img {
+  width: 30px;
+  border: none;
+}
+
+.nav-container > span > a {
+  margin: 0 35px;
+}
+
+nav > .nav-container > span > a {
+  color: white;
+  text-decoration: none;
+}
+
+nav > .nav-container > span > a:hover {
+  padding-bottom: 3px;
+  border-bottom: 2px solid white;
+}
+
+/* Form Section */
+h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 2em;
+}
+
+.img-and-form-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+
+.image {
+  border-radius: 50%;
+  border: 5px solid #ff9500;
+}
+
+
+form > div {
+  margin: 25px 0;
+}
+
+label {
+  text-align: left;
+  display: block;
+  margin-bottom: .5em;
+}
+
+input[type="email"], input[type="password"] {
+  display: block;
+  border: 1px solid #c3b6b6;
+  border-radius: 1em;
+  height: 30px;
+  padding: 0 1em;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type="email"]:hover, input[type="password"]:hover {
+  border: 1px solid #ff9500;
+}
+
+input[type="submit"] {
+  background: #ff9500;
+  padding: 10px 30px;
+  border: 1px solid #c3b6b6;
+  border-radius: 2em;
+  color: white;
+  font-size: 1.1em;
+}
+
+input[type="submit"]:hover {
+  background-color: white;
+  border: 1px solid #ff9500;
+  color: black;
+}
+
+/* Hamburger menu */
+.container {
+/*   display: inline-block; */
+  display: none;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+/* For Tablet View */
+@media(max-width: 784px) {
+  /* nav */
+  .nav-container {
+    display: none;
+  }
+
+  .container {
+    display: inline-block;
+  }
+
+  /* Form Section */
+  .image {
+    width: 85%;
+  }
+
+  .img-and-form-container {
+    width: 100%;
+    gap: 20px;
+  }
+}
+
+/* For Mobile View */
+@media(max-width: 540px) {
+  /* nav */
+  nav {
+    margin: 0;
+  }
+  
+  /* Form Section */
+  h1 {
+    margin: 30px 0;
+  }
+  
+  .img-and-form-container {
+    gap: 25x;
+    flex-direction: column;
+  }
+
+  .image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-container > img {
+    width: 60%;
+  }
+
+  input[type="email"], input[type="password"] {
+    width: 225px;
+  }
+
+  form div:last-child {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+}

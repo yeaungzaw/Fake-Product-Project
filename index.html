@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- make sure to add <title> <link> (for your css file) and any <meta> tags -->
+    <title>Acme Product Inc.</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet">
+
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+    </script>
+</head>
+
+<body>
+    <!-- feel free to add classes to any elements you need in order to apply css rules -->
+    <nav>
+        <!-- 1. make the background of the nav a different color -->
+        <!-- 2. add padding to the nav to help the links to hug them sides the nav element -->
+        <!-- 3. make the links in the nav a readable color, depending on what you made the nav's background color -->
+        <!-- 3.5 Adding margin to the links so they are more spread out along the nav -->
+        <div class="logo-container">
+            <img src="img/logo.png"><span>cme</span>
+        </div>
+
+        <div class="container" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <div class="nav-container">
+            <span>
+                <a href="index.html">Home</a>
+            </span>
+            <span>
+                <a href="about.html">About</a>
+            </span>
+            <span>
+                <a href="contact.html">Contact</a>
+            </span>
+        </div>
+        <!-- 4. Add margin to the bottom of the nav to separate it from the content below -->
+    </nav>
+
+    <section>
+        <h1>Acme Product Inc.</h1>
+
+        <!-- 5. make the 2 divs inside the <section> be side by side, so that the image and the login form are next to each other instead of stacked -->
+        <div class="img-and-form-container">
+
+            <div class="image-container">
+                <img class="image" src="https://picsum.photos/300">
+            </div>
+
+            <div class="form-container">
+                <!-- 6. make it so that the form is centered -->
+                <form>
+                    <div>
+                        <!-- 7. Add margin to the email input and password input to provide spacing in the form, so elements aren't so crowded together -->
+                        <label for="email">Email: </label>
+                        <input id="email" name="email" type="email">
+                    </div>
+                    <div>
+                        <label for="password">Password: </label>
+                        <input id="password" name="password" type="password">
+                    </div>
+                    <div>
+                        <!-- 8. Change the background color, text color, and padding of the login button (along with anything else you want, get creative!) -->
+                        <input type="Submit" value="Log In">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>
